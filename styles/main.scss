@@ -1,0 +1,148 @@
+// FONTS IMPORT
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+// VARIABLES IMPORT
+@import 'variables.scss';
+
+// GLOBAL STYLES
+*{
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    font-family: $font;
+    margin: 0px;
+}
+ul{
+    list-style: none;
+}
+input{
+    width: 250px;
+    height: 45px;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.341);
+    color: white;
+    font-family: $font !important;
+    &::placeholder{
+        color: rgba(255, 255, 255, 0.681);
+        font-family: $font;
+    }
+    &.default{
+        border-radius: $radius;
+    }
+}
+button{
+    font-family: $font;
+    transition: transform ease-in-out 0.15s;
+    border: none;
+        &:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    &.btn{
+        width: 250px;
+        height: 50px;
+    }    
+    &.primarybtn{
+        background: $blue-gradient;
+        color: white;
+        padding: .5rem 2rem;
+        border-radius: $radius;
+    }
+}
+
+// PAGE STRUCTURE
+.page-container{
+    width: 100vw;
+    height: 100vh;
+    &.abstract{
+        background: $abstract-bg;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &.teamwhite{
+        background: $team-white-bg;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &.lautaro-blue{
+        background: $lautaro-blue;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &.team{
+        background: $full-team;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &.scudetto{
+        background: $scudetto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .page-content{
+        width: 100vw;
+        height: 100vh;
+        &.blurred{
+            background: $blue-transparent-bg;
+            backdrop-filter: blur(10px);
+        }
+        color: white;
+        &.centered{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// MEDIA and IMAGES STYLES
+#ermes-avatar{
+    border-radius: $round;
+    width: 100px;
+    height: 100px;
+}
+// LOGO
+.logo{
+    font-style: italic;
+    font-size: $giant;
+    font-weight: $black;
+    margin-top: 1rem;
+}
+
+// COMPONENTS
+.avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-form{
+    margin-top: 1.5rem;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        #login-btn{
+            margin-top: 2rem;
+        }
+    }
+}

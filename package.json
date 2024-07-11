@@ -1,0 +1,29 @@
+{
+  "name": "ermeshub",
+  "version": "1.0.0",
+  "description": "football analysis platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riccardoavanzi/ermeshub.git"
+  },
+  "keywords": [
+    "football",
+    "analytics"
+  ],
+  "author": "Riccardo Avanzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riccardoavanzi/ermeshub/issues"
+  },
+  "homepage": "https://github.com/riccardoavanzi/ermeshub#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.3",
+    "dart-sass": "^1.25.0",
+    "remixicon": "^4.3.0"
+  }
+}

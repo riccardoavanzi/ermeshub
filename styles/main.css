@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap");
+* {
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+  padding-block-start: 0px;
+  padding-block-end: 0px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  margin: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 250px;
+  height: 45px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.341);
+  color: white;
+  font-family: "Sofia Sans Semi Condensed", sans-serif !important;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.681);
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+}
+input.default {
+  border-radius: 8px;
+}
+
+button {
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  transition: transform ease-in-out 0.15s;
+  border: none;
+}
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+button.btn {
+  width: 250px;
+  height: 50px;
+}
+button.primarybtn {
+  background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+}
+.page-container.abstract {
+  background: url("https://tinyurl.com/mt6xfj49");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-container.teamwhite {
+  background: url("https://tinyurl.com/286vcncx");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-container.lautaro-blue {
+  background: url("https://tinyurl.com/mr2ety32");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-container.team {
+  background: url("https://intermilan.bynder.com/transform/2f0214aa-3247-4c26-93db-b6c7787f22b8/FC-Internazionale-Official-Team-Photo?quality=100&io=transform:fill,width:1920&format=webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-container.scudetto {
+  background: url("/assets/scudetto.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-container .page-content {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+.page-container .page-content.blurred {
+  background: rgba(2, 42, 221, 0.7);
+  backdrop-filter: blur(10px);
+}
+.page-container .page-content.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ermes-avatar {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.logo {
+  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 1rem;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  margin-top: 1.5rem;
+}
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-form form #login-btn {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
