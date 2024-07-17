@@ -20,6 +20,7 @@
 body{
     font-family: $font;
     margin: 0px;
+    font-size: $big;
 }
 ul{
     list-style: none;
@@ -49,6 +50,7 @@ button{
         &:hover{
             transform: scale(1.05);
             cursor: pointer;
+            font-weight: $black;
         }
     &.btn{
         width: 250px;
@@ -62,7 +64,7 @@ button{
     }
 }
 
-// PAGE STRUCTURE
+// GENERIC PAGE STRUCTURE
 .page-container{
     width: 100vw;
     height: 100vh;
@@ -127,7 +129,7 @@ button{
     margin-top: 1rem;
 }
 
-// COMPONENTS
+// LOGIN PAGE
 .avatar{
     display: flex;
     flex-direction: column;
@@ -143,6 +145,50 @@ button{
         justify-content: center;
         #login-btn{
             margin-top: 2rem;
+        }
+    }
+}
+
+
+// OPTIONS PAGE
+.options-container{
+    .options-content{
+        display: flex;
+        .option-item{
+            width: 14rem;
+            height: 14rem;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: $huge;
+            border-radius: $radius;
+            &#calendario{
+                background: $dark-transparent, url("https://tinyurl.com/3wj953eu");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &#formazioni{
+                background: $dark-transparent, url("https://tinyurl.com/4nwcpzuy");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &#pagelle{
+                background: $dark-transparent, url("https://tinyurl.com/4et9rmhz");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &#scouting{
+                background: $dark-transparent, url("https://tinyurl.com/mr2ety32");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
         }
     }
 }

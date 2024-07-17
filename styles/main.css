@@ -15,6 +15,7 @@
 body {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
   margin: 0px;
+  font-size: 1.3rem;
 }
 
 ul {
@@ -48,6 +49,7 @@ button {
 button:hover {
   transform: scale(1.05);
   cursor: pointer;
+  font-weight: 900;
 }
 button.btn {
   width: 250px;
@@ -141,6 +143,46 @@ button.primarybtn {
 }
 .login-form form #login-btn {
   margin-top: 2rem;
+}
+
+.options-container .options-content {
+  display: flex;
+}
+.options-container .options-content .option-item {
+  width: 14rem;
+  height: 14rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 8px;
+}
+.options-container .options-content .option-item#calendario {
+  background: url("https://tinyurl.com/3wj953eu"), rgba(2, 42, 221, 0.7);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.options-container .options-content .option-item#formazioni {
+  background: url("https://tinyurl.com/4nwcpzuy"), rgba(2, 42, 221, 0.7);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.options-container .options-content .option-item#pagelle {
+  background: url("https://tinyurl.com/4et9rmhz"), rgba(2, 42, 221, 0.7);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.options-container .options-content .option-item#scouting {
+  background: url("https://tinyurl.com/mr2ety32"), rgba(2, 42, 221, 0.7);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */
