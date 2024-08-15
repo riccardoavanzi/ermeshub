@@ -1,0 +1,45 @@
+{
+    "coppa_italia_2024_2025": [
+      {
+        "round": "Round of 16",
+        "date": "2024-12-04",
+        "home_team": "Inter",
+        "away_team": "TBD",
+        "stadium": "San Siro",
+        "location": "HOME"
+      },
+      {
+        "round": "Quarter-finals",
+        "date": "2025-01-22",
+        "home_team": "TBD",
+        "away_team": "TBD",
+        "stadium": "TBD",
+        "location": "TBD"
+      },
+      {
+        "round": "Semi-finals (1st Leg)",
+        "date": "2025-02-12",
+        "home_team": "TBD",
+        "away_team": "TBD",
+        "stadium": "TBD",
+        "location": "TBD"
+      },
+      {
+        "round": "Semi-finals (2nd Leg)",
+        "date": "2025-03-05",
+        "home_team": "TBD",
+        "away_team": "TBD",
+        "stadium": "TBD",
+        "location": "TBD"
+      },
+      {
+        "round": "Final",
+        "date": "2025-05-14",
+        "home_team": "TBD",
+        "away_team": "TBD",
+        "stadium": "Stadio Olimpico",
+        "location": "Neutral"
+      }
+    ]
+  }
+  

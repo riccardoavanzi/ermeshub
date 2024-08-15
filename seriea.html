@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Ermes Hub - Competizioni - Serie A</title>
+</head>
+<body>
+    <div class="page-container sansiro">
+        <div class="page-content blurred centered">
+            <!-- HEADER -->
+            <div class="header-container">
+                <div class="header-content">
+                    <div class="logo">
+                        ErmesHub
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="hub.html">Hub</a></li>
+                            <li><a href="competizioni.html">Competizioni</a></li>
+                            <li><a href="formazioni.html">Formazioni</a></li>
+                            <li><a href="pagelle.html">Pagelle</a></li>
+                            <li><a href="scouting.html">Scouting</a></li>
+                            <li><button class="baselinebtn">logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- PARTITE -->
+            <div class="fixtures-container">
+                <div class="fixtures-content">
+                    <div class="match-container">
+                        
+                        <div class="date-container">
+                            <div class="match-number"></div>
+                            <div class="date"></div>
+                        </div>
+                        <div class="game-details">
+                            <div class="first-team">
+                                <div class="team-name"></div>
+                                <div class="team-logo"></div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="second-team">
+                                <div class="team-logo"></div>
+                                <div class="team-name"></div>
+                            </div>
+                        </div>
+                        <div class="home-away-container">
+                            <div class="home-away-content"></div>
+                            <div class="stadium"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to fetch JSON data and populate the HTML
+    function fetchAndPopulateMatches() {
+        fetch('calendario/seriea.json')
+            .then(response => response.json())
+            .then(data => populateMatches(data))
+            .catch(error => console.error('Error fetching the JSON data:', error));
+    }
+
+    // Function to populate the HTML with JSON data
+    function populateMatches(data) {
+        const fixturesContainer = document.querySelector('.fixtures-content');
+
+        // Clear existing content
+        fixturesContainer.innerHTML = '';
+
+        // Assuming data has the correct structure
+        data['serie_a_2024_2025'].forEach(match => {
+            // Create match container
+            const matchContainer = document.createElement('div');
+            matchContainer.classList.add('match-container');
+
+            // Create date container
+            const dateContainer = document.createElement('div');
+            dateContainer.classList.add('date-container');
+            dateContainer.innerHTML = `
+                <div class="match-number">Matchday ${match.matchday}</div>
+                <div class="date">${match.date} - ${match.schedule}</div>
+            `;
+
+            // Create game details
+            const gameDetails = document.createElement('div');
+            gameDetails.classList.add('game-details');
+            gameDetails.innerHTML = `
+                <div class="first-team">
+                    <div class="team-name">${match.home_team}</div>
+                    <div class="team-logo"><img src="${match.home_team_logo}" alt="${match.home_team} logo"></div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="second-team">
+                    <div class="team-name">${match.away_team}</div>
+                    <div class="team-logo"><img src="${match.away_team_logo}" alt="${match.away_team} logo"></div>
+                </div>
+            `;
+
+            // Create home/away and stadium container
+            const homeAwayContainer = document.createElement('div');
+            homeAwayContainer.classList.add('home-away-container');
+            homeAwayContainer.innerHTML = `
+                <div class="home-away-content">${match.location === 'HOME' ? 'Home' : 'Away'}</div>
+                <div class="stadium">${match.stadium}</div>
+            `;
+
+            // Append all elements to the match container
+            matchContainer.appendChild(dateContainer);
+            matchContainer.appendChild(gameDetails);
+            matchContainer.appendChild(homeAwayContainer);
+
+            // Append match container to fixtures content
+            fixturesContainer.appendChild(matchContainer);
+        });
+    }
+
+    // Call the function to fetch data and populate matches
+    fetchAndPopulateMatches();
+});
+
+
+</script>
+</body>
+</html>

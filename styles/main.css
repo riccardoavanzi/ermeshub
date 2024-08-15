@@ -20,6 +20,8 @@ body {
 
 ul {
   list-style: none;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 input {
@@ -43,6 +45,7 @@ input.default {
 
 button {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
+  font-size: 1rem;
   transition: transform ease-in-out 0.15s;
   border: none;
 }
@@ -52,14 +55,30 @@ button:hover {
   font-weight: 900;
 }
 button.btn {
-  width: 250px;
-  height: 50px;
+  width: 250px !important;
+  height: 50px !important;
 }
 button.primarybtn {
   background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
   color: white;
   padding: 0.5rem 2rem;
   border-radius: 8px;
+}
+button.baselinebtn {
+  color: white;
+  background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+a {
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  transition: transform ease-in-out 0.15s;
+  border: none;
+}
+a:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .page-container {
@@ -84,8 +103,14 @@ button.primarybtn {
   background-position: center;
   background-repeat: no-repeat;
 }
-.page-container.team {
+.page-container.c {
   background: url("https://intermilan.bynder.com/transform/2f0214aa-3247-4c26-93db-b6c7787f22b8/FC-Internazionale-Official-Team-Photo?quality=100&io=transform:fill,width:1920&format=webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-container.sansiro {
+  background: url("https://images.unsplash.com/photo-1693517343607-e7dced201648?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -100,6 +125,8 @@ button.primarybtn {
   width: 100vw;
   height: 100vh;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 .page-container .page-content.blurred {
   background: rgba(2, 42, 221, 0.7);
@@ -110,6 +137,31 @@ button.primarybtn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.page-container .page-content .header-container .header-content {
+  height: 70px;
+  width: 100vw;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+}
+.page-container .page-content .header-container .header-content .logo {
+  font-size: 1.5rem;
+  margin-top: 0rem;
+}
+.page-container .page-content .header-container .header-content .menu ul {
+  list-style: none;
+  display: flex;
+}
+.page-container .page-content .header-container .header-content .menu ul li {
+  margin: 0.5rem;
+}
+.page-container .page-content .header-container .header-content .menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
 }
 
 #ermes-avatar {
@@ -145,6 +197,14 @@ button.primarybtn {
   margin-top: 2rem;
 }
 
+.options-container {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .options-container .options-content {
   display: flex;
 }
@@ -153,6 +213,7 @@ button.primarybtn {
   height: 14rem;
   margin: 1rem;
   display: flex;
+  text-decoration: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -161,28 +222,141 @@ button.primarybtn {
   border-radius: 8px;
 }
 .options-container .options-content .option-item#calendario {
-  background: url("https://tinyurl.com/3wj953eu"), rgba(2, 42, 221, 0.7);
+  background: url("https://tinyurl.com/3wj953eu");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .options-container .options-content .option-item#formazioni {
-  background: url("https://tinyurl.com/4nwcpzuy"), rgba(2, 42, 221, 0.7);
+  background: url("https://tinyurl.com/7bdu93tb");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .options-container .options-content .option-item#pagelle {
-  background: url("https://tinyurl.com/4et9rmhz"), rgba(2, 42, 221, 0.7);
+  background: url("https://tinyurl.com/4et9rmhz");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .options-container .options-content .option-item#scouting {
-  background: url("https://tinyurl.com/mr2ety32"), rgba(2, 42, 221, 0.7);
+  background: url("https://tinyurl.com/mr2ety32");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.calendar-container .calendar-content {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calendar-container .calendar-content #competizioni {
+  display: flex;
+  align-items: center;
+}
+.calendar-container .calendar-content #competizioni li {
+  margin: 1rem;
+  padding: 0.5rem;
+  background: white;
+  width: 100px;
+  height: 150px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10rem;
+  height: 12rem;
+}
+.calendar-container .calendar-content #competizioni li a {
+  background: none;
+  color: white;
+  font-size: 1.3rem;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar-container .calendar-content #competizioni li a:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  font-weight: 900;
+}
+.calendar-container .calendar-content #competizioni li a img {
+  width: 100px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.fixtures-container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+.fixtures-container .fixtures-content {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fixtures-container .fixtures-content .match-container {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.fixtures-container .fixtures-content .match-container .date-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: left;
+}
+.fixtures-container .fixtures-content .match-container .game-details {
+  width: 20rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  text-align: center;
+}
+.fixtures-container .fixtures-content .match-container .game-details .vs {
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+}
+.fixtures-container .fixtures-content .match-container .game-details .first-team, .fixtures-container .fixtures-content .match-container .game-details .second-team {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem;
+}
+.fixtures-container .fixtures-content .match-container .game-details .first-team .team-name, .fixtures-container .fixtures-content .match-container .game-details .second-team .team-name {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.fixtures-container .fixtures-content .match-container .game-details .first-team .team-logo, .fixtures-container .fixtures-content .match-container .game-details .second-team .team-logo {
+  margin-top: 0.5rem;
+}
+.fixtures-container .fixtures-content .match-container .game-details .first-team .team-logo img, .fixtures-container .fixtures-content .match-container .game-details .second-team .team-logo img {
+  width: 50px;
+}
+.fixtures-container .fixtures-content .match-container .home-away-container {
+  color: white;
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */

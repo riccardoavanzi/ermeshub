@@ -24,6 +24,8 @@ body{
 }
 ul{
     list-style: none;
+    margin: 0rem;
+    padding: 0rem;
 }
 input{
     width: 250px;
@@ -45,6 +47,7 @@ input{
 }
 button{
     font-family: $font;
+    font-size: 1rem;
     transition: transform ease-in-out 0.15s;
     border: none;
         &:hover{
@@ -53,8 +56,8 @@ button{
             font-weight: $black;
         }
     &.btn{
-        width: 250px;
-        height: 50px;
+        width: 250px !important;
+        height: 50px !important;
     }    
     &.primarybtn{
         background: $blue-gradient;
@@ -62,6 +65,21 @@ button{
         padding: .5rem 2rem;
         border-radius: $radius;
     }
+    &.baselinebtn{
+      color: white;
+      background: $blue-gradient;
+      padding: .5rem 1rem;
+      border-radius: $radius;
+    }
+}
+a{
+    font-family: $font;
+    transition: transform ease-in-out 0.15s;
+    border: none;
+        &:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        } 
 }
 
 // GENERIC PAGE STRUCTURE
@@ -86,8 +104,14 @@ button{
         background-position: center;
         background-repeat: no-repeat;
     }
-    &.team{
+    &.c{
         background: $full-team;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &.sansiro{
+        background: $sansiro;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -101,16 +125,47 @@ button{
     .page-content{
         width: 100vw;
         height: 100vh;
+        color: white;
         &.blurred{
             background: $blue-transparent-bg;
             backdrop-filter: blur(10px);
         }
-        color: white;
         &.centered{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        display: flex;
+        flex-direction: column;
+        .header-container{
+            .header-content{
+                height: 70px;
+                width: 100vw;
+                padding: 2rem;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center !important;
+                .logo{
+                    font-size: 1.5rem;
+                    margin-top: 0rem;
+                }
+                .menu{
+                   ul{
+                    list-style: none;
+                    display: flex;
+                    li{
+                        margin: .5rem;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            font-size: 1rem;
+                        }
+                    }
+                   }
+                }
+            }
         }
     }
 }
@@ -148,10 +203,13 @@ button{
         }
     }
 }
-
-
-// OPTIONS PAGE
 .options-container{
+    height: calc(100vh - 70px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .options-content{
         display: flex;
         .option-item{
@@ -159,6 +217,7 @@ button{
             height: 14rem;
             margin: 1rem;
             display: flex;
+            text-decoration: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -166,28 +225,144 @@ button{
             font-size: $huge;
             border-radius: $radius;
             &#calendario{
-                background: $dark-transparent, url("https://tinyurl.com/3wj953eu");
+                background: url("https://tinyurl.com/3wj953eu");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
             &#formazioni{
-                background: $dark-transparent, url("https://tinyurl.com/4nwcpzuy");
+                background: url("https://tinyurl.com/7bdu93tb");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
             &#pagelle{
-                background: $dark-transparent, url("https://tinyurl.com/4et9rmhz");
+                background: url("https://tinyurl.com/4et9rmhz");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
             &#scouting{
-                background: $dark-transparent, url("https://tinyurl.com/mr2ety32");
+                background: url("https://tinyurl.com/mr2ety32");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+// CALENDAR PAGE
+.calendar-container{
+    .calendar-content{
+        height: calc(100vh - 70px);
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #competizioni{
+            display: flex;
+            align-items: center;
+            li{
+                margin: 1rem;
+                padding: .5rem;
+                background: white;
+                width: 100px;
+                height: 150px;
+                border-radius: $bigradius;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 10rem;
+                height: 12rem;
+                a{
+                    background: none;
+                    color: white;
+                    font-size: $big;
+                    font-style: italic;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        transform: scale(1.05);
+                        cursor: pointer;
+                        font-weight: $black;
+                    }
+                    img{
+                        width: 100px;
+                        height: 130px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fixtures-container{
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    .fixtures-content{
+        width: 100%;
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .match-container{
+            width: 80%;
+            margin: 1rem auto;
+            padding: 1.5rem;
+            background: $blue-gradient;
+            border-radius: $radius;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .date-container{
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                text-align: left;
+            }
+            .game-details{
+                width: 20rem;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                text-align: center;
+                .vs{
+                    text-transform: uppercase;
+                    font-style: italic;
+                    color: white;
+                }
+                .first-team, .second-team{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0rem 1rem;
+                    .team-name{
+                        font-size: $big;
+                        color: white;
+                        font-weight: $black;
+                        text-transform: uppercase;
+                    }
+                    .team-logo{
+                        margin-top: .5rem;
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+            .home-away-container{
+                color: white;
+                text-align: right;
             }
         }
     }
