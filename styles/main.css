@@ -154,6 +154,7 @@ a:hover {
 .page-container .page-content .header-container .header-content .menu ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 .page-container .page-content .header-container .header-content .menu ul li {
   margin: 0.5rem;
@@ -306,7 +307,7 @@ a:hover {
 }
 .fixtures-container .fixtures-content .match-container {
   width: 80%;
-  margin: 1rem auto;
+  margin: auto;
   padding: 1.5rem;
   background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
   border-radius: 8px;
@@ -357,6 +358,151 @@ a:hover {
 .fixtures-container .fixtures-content .match-container .home-away-container {
   color: white;
   text-align: right;
+}
+.fixtures-container .fixtures-content .score-container {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.fixtures-container .fixtures-content .score-container .score-content {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.fixtures-container .fixtures-content .score-container .score-content .home-team-score, .fixtures-container .fixtures-content .score-container .score-content .separator, .fixtures-container .fixtures-content .score-container .score-content .away-team-score {
+  margin: 0rem 1rem 0.5rem 1rem;
+  color: white;
+}
+.fixtures-container .fixtures-content .ctas-container {
+  width: fit-content;
+  margin-bottom: 5rem;
+}
+.fixtures-container .fixtures-content .ctas-container a {
+  width: 10rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.formazione-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+  margin-top: 5rem;
+}
+.formazione-container::-webkit-scrollbar {
+  display: none;
+}
+.formazione-container .match-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.formazione-container .match-header-container .competition img {
+  width: 50px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed rgb(85, 76, 209);
+}
+.formazione-container .match-header-container .match-header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formazione-container .match-header-container .match-header-content .vs {
+  font-size: 1.3rem;
+}
+.formazione-container .match-header-container .match-header-content .home-team-container, .formazione-container .match-header-container .match-header-content .away-team-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.formazione-container .match-header-container .match-header-content .home-team-container img, .formazione-container .match-header-container .match-header-content .away-team-container img {
+  width: 80px;
+  margin: 0rem 1rem;
+}
+.formazione-container .match-header-container .match-header-content .home-team-container .team-name, .formazione-container .match-header-container .match-header-content .away-team-container .team-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.formazione-container .match-header-container .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background: rgba(2, 42, 221, 0.7);
+  border-radius: 8px;
+}
+.formazione-container .match-header-container .details .stadium, .formazione-container .match-header-container .details .schedule {
+  margin: 1rem;
+  font-size: 1rem;
+}
+.formazione-container .formazione-content {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+}
+.formazione-container .formazione-content .formazione-list-container {
+  margin: 1rem;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-header {
+  display: flex;
+  align-items: center;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-header .team-name {
+  margin-left: 1rem;
+  font-weight: 900;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-rooster .players-container {
+  margin-top: 0.5rem;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-rooster .players-container .players-content {
+  display: flex;
+  flex-direction: column;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-rooster .players-container .players-content .player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  border-radius: 24px;
+  background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+  width: 25rem;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-rooster .players-container .players-content .player .player-img-name {
+  display: flex;
+  align-items: center;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-rooster .players-container .players-content .player .player-img-name .player-name {
+  margin-left: 0.5rem;
+}
+.formazione-container .formazione-content .formazione-list-container .formazione-list-content .formazione-list-rooster .players-container .players-content .player .player-details .player-number {
+  font-size: 1.8rem;
+}
+.formazione-container .formazione-content .formazione-display-container {
+  margin: 0rem 2rem;
+}
+.formazione-container .formazione-content .formazione-display-container .formazione-display-content .canvas-wrapper {
+  padding: 1rem;
+  background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.formazione-container .formazione-content .formazione-display-container .formazione-display-content .canvas-wrapper .canvas {
+  background-color: #77b300;
+  border: none;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

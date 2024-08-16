@@ -1,0 +1,181 @@
+{
+    "giocatori": [
+      {
+        "nome": "Yann Sommer",
+        "numero_maglia": 1,
+        "posizione": "Portiere",
+        "eta": 35,
+        "origine": "Svizzera",
+        "foto": "assets/giocatori/sommer.png"
+      },
+      {
+        "nome": "Josep Martínez",
+        "numero_maglia": 13,
+        "posizione": "Portiere",
+        "eta": 25,
+        "origine": "Spagna",
+        "foto": "assets/giocatori/martinez.png"
+      },
+      {
+        "nome": "Matteo Darmian",
+        "numero_maglia": 36,
+        "posizione": "Terzino destro",
+        "eta": 34,
+        "origine": "Italia",
+        "foto": "assets/giocatori/darmian.png"
+      },
+      {
+        "nome": "Alessandro Bastoni",
+        "numero_maglia": 95,
+        "posizione": "Difensore centrale",
+        "eta": 25,
+        "origine": "Italia",
+        "foto": "assets/giocatori/bastoni.png"
+      },
+      {
+        "nome": "Francesco Acerbi",
+        "numero_maglia": 15,
+        "posizione": "Difensore centrale",
+        "eta": 36,
+        "origine": "Italia",
+        "foto": "assets/giocatori/acerbi.png"
+      },
+      {
+        "nome": "Federico Dimarco",
+        "numero_maglia": 32,
+        "posizione": "Terzino sinistro",
+        "eta": 26,
+        "origine": "Italia",
+        "foto": "assets/giocatori/dimarco.png"
+      },
+      {
+        "nome": "Benjamin Pavard",
+        "numero_maglia": 28,
+        "posizione": "Difensore centrale",
+        "eta": 28,
+        "origine": "Francia",
+        "foto": "assets/giocatori/pavard.png"
+      },
+      {
+        "nome": "Carlos Augusto",
+        "numero_maglia": 30,
+        "posizione": "Terzino sinistro",
+        "eta": 24,
+        "origine": "Brasile",
+        "foto": "assets/giocatori/augusto.png"
+      },
+      {
+        "nome": "Denzel Dumfries",
+        "numero_maglia": 2,
+        "posizione": "Terzino destro",
+        "eta": 27,
+        "origine": "Paesi Bassi",
+        "foto": "assets/giocatori/dumfries.png"
+      },
+      {
+        "nome": "Stefan de Vrij",
+        "numero_maglia": 6,
+        "posizione": "Difensore centrale",
+        "eta": 32,
+        "origine": "Paesi Bassi",
+        "foto": "assets/giocatori/devrij.png"
+      },
+      {
+        "nome": "Yann Bisseck",
+        "numero_maglia": 31,
+        "posizione": "Difensore centrale",
+        "eta": 23,
+        "origine": "Germania",
+        "foto": "assets/giocatori/bisseck.png"
+      },
+      {
+        "nome": "Hakan Çalhanoğlu",
+        "numero_maglia": 20,
+        "posizione": "Centrocampista",
+        "eta": 30,
+        "origine": "Turchia",
+        "foto": "assets/giocatori/calhanoglu.png"
+      },
+      {
+        "nome": "Henrikh Mkhitaryan",
+        "numero_maglia": 22,
+        "posizione": "Centrocampista",
+        "eta": 35,
+        "origine": "Armenia",
+        "foto": "assets/giocatori/mkhitaryan.png"
+      },
+      {
+        "nome": "Davide Frattesi",
+        "numero_maglia": 16,
+        "posizione": "Centrocampista",
+        "eta": 24,
+        "origine": "Italia",
+        "foto": "assets/giocatori/frattesi.png"
+      },
+      {
+        "nome": "Kristjan Asllani",
+        "numero_maglia": 14,
+        "posizione": "Centrocampista",
+        "eta": 21,
+        "origine": "Albania",
+        "foto": "assets/giocatori/asllani.png"
+      },
+      {
+        "nome": "Nicolò Barella",
+        "numero_maglia": 23,
+        "posizione": "Centrocampista",
+        "eta": 27,
+        "origine": "Italia",
+        "foto": "assets/giocatori/barella.png"
+      },
+      {
+        "nome": "Tajon Buchanan",
+        "numero_maglia": 11,
+        "posizione": "Centrocampista",
+        "eta": 25,
+        "origine": "Canada",
+        "foto": "assets/giocatori/buchanan.png"
+      },
+      {
+        "nome": "Piotr Zieliński",
+        "numero_maglia": 21,
+        "posizione": "Centrocampista",
+        "eta": 29,
+        "origine": "Polonia",
+        "foto": "assets/giocatori/zielinski.png"
+      },
+      {
+        "nome": "Lautaro Martínez",
+        "numero_maglia": 10,
+        "posizione": "Attaccante",
+        "eta": 26,
+        "origine": "Argentina",
+        "foto": "assets/giocatori/martinez.png"
+      },
+      {
+        "nome": "Marcus Thuram",
+        "numero_maglia": 9,
+        "posizione": "Attaccante",
+        "eta": 26,
+        "origine": "Francia",
+        "foto": "assets/giocatori/thuram.png"
+      },
+      {
+        "nome": "Marko Arnautović",
+        "numero_maglia": 8,
+        "posizione": "Attaccante",
+        "eta": 35,
+        "origine": "Austria",
+        "foto": "assets/giocatori/arnautovic.png"
+      },
+      {
+        "nome": "Mehdi Taremi",
+        "numero_maglia": 17,
+        "posizione": "Attaccante",
+        "eta": 31,
+        "origine": "Iran",
+        "foto": "assets/giocatori/taremi.png"
+      }
+    ]
+  }
+  

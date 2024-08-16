@@ -26,11 +26,13 @@
                     </div>
                 </div>
             </div>
+            <div class="logo-serie-a">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNbnCGdtHO203OHmuKsyCZlYP1d2FXNi_19Q&s" style="width: 70px; margin-bottom: 1rem;" alt="">
+            </div>
             <!-- PARTITE -->
             <div class="fixtures-container">
                 <div class="fixtures-content">
                     <div class="match-container">
-                        
                         <div class="date-container">
                             <div class="match-number"></div>
                             <div class="date"></div>
@@ -50,6 +52,16 @@
                             <div class="home-away-content"></div>
                             <div class="stadium"></div>
                         </div>
+                    </div>
+                    <div class="score-container">
+                        <div class="score-content">
+                            <div class="home-team-score"></div>
+                            <div class="separator">-</div>
+                            <div class="away-team-score"></div>
+                        </div>
+                    </div>
+                    <div class="ctas-container">
+                        <a href="formazioni-partita.html">Formazioni partita</a>
                     </div>
                 </div>
             </div>
@@ -117,14 +129,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Append match container to fixtures content
             fixturesContainer.appendChild(matchContainer);
+
+            // Create score container (outside of match-container)
+            const scoreContainer = document.createElement('div');
+            scoreContainer.classList.add('score-container');
+            scoreContainer.innerHTML = `
+                <div class="score-content">
+                    <div class="home-team-score">${match.home_score}</div>
+                    <div class="separator">-</div>
+                    <div class="away-team-score">${match.away_score}</div>
+                </div>
+            `;
+
+            // Create CTAs container (outside of match-container)
+            const ctasContainer = document.createElement('div');
+            ctasContainer.classList.add('ctas-container');
+            ctasContainer.innerHTML = `
+                <a href="formazione-partita.html">Formazioni partita</a>
+            `;
+
+            // Append the score and CTAs containers to fixtures content (outside of match-container)
+            fixturesContainer.appendChild(scoreContainer);
+            fixturesContainer.appendChild(ctasContainer);
         });
     }
 
     // Call the function to fetch data and populate matches
     fetchAndPopulateMatches();
 });
-
-
 </script>
 </body>
 </html>
