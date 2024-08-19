@@ -61,102 +61,105 @@
                         </div>
                     </div>
                     <div class="ctas-container">
-                        <a href="formazioni-partita.html">Formazioni partita</a>
+                        <a href="formazione-partita.html">Formazioni partita</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Function to fetch JSON data and populate the HTML
-    function fetchAndPopulateMatches() {
-        fetch('calendario/seriea.json')
-            .then(response => response.json())
-            .then(data => populateMatches(data))
-            .catch(error => console.error('Error fetching the JSON data:', error));
-    }
-
-    // Function to populate the HTML with JSON data
-    function populateMatches(data) {
-        const fixturesContainer = document.querySelector('.fixtures-content');
-
-        // Clear existing content
-        fixturesContainer.innerHTML = '';
-
-        // Assuming data has the correct structure
-        data['serie_a_2024_2025'].forEach(match => {
-            // Create match container
-            const matchContainer = document.createElement('div');
-            matchContainer.classList.add('match-container');
-
-            // Create date container
-            const dateContainer = document.createElement('div');
-            dateContainer.classList.add('date-container');
-            dateContainer.innerHTML = `
-                <div class="match-number">Matchday ${match.matchday}</div>
-                <div class="date">${match.date} - ${match.schedule}</div>
-            `;
-
-            // Create game details
-            const gameDetails = document.createElement('div');
-            gameDetails.classList.add('game-details');
-            gameDetails.innerHTML = `
-                <div class="first-team">
-                    <div class="team-name">${match.home_team}</div>
-                    <div class="team-logo"><img src="${match.home_team_logo}" alt="${match.home_team} logo"></div>
-                </div>
-                <div class="vs">VS</div>
-                <div class="second-team">
-                    <div class="team-name">${match.away_team}</div>
-                    <div class="team-logo"><img src="${match.away_team_logo}" alt="${match.away_team} logo"></div>
-                </div>
-            `;
-
-            // Create home/away and stadium container
-            const homeAwayContainer = document.createElement('div');
-            homeAwayContainer.classList.add('home-away-container');
-            homeAwayContainer.innerHTML = `
-                <div class="home-away-content">${match.location === 'HOME' ? 'Home' : 'Away'}</div>
-                <div class="stadium">${match.stadium}</div>
-            `;
-
-            // Append all elements to the match container
-            matchContainer.appendChild(dateContainer);
-            matchContainer.appendChild(gameDetails);
-            matchContainer.appendChild(homeAwayContainer);
-
-            // Append match container to fixtures content
-            fixturesContainer.appendChild(matchContainer);
-
-            // Create score container (outside of match-container)
-            const scoreContainer = document.createElement('div');
-            scoreContainer.classList.add('score-container');
-            scoreContainer.innerHTML = `
-                <div class="score-content">
-                    <div class="home-team-score">${match.home_score}</div>
-                    <div class="separator">-</div>
-                    <div class="away-team-score">${match.away_score}</div>
-                </div>
-            `;
-
-            // Create CTAs container (outside of match-container)
-            const ctasContainer = document.createElement('div');
-            ctasContainer.classList.add('ctas-container');
-            ctasContainer.innerHTML = `
-                <a href="formazione-partita.html">Formazioni partita</a>
-            `;
-
-            // Append the score and CTAs containers to fixtures content (outside of match-container)
-            fixturesContainer.appendChild(scoreContainer);
-            fixturesContainer.appendChild(ctasContainer);
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to fetch JSON data and populate the HTML
+            function fetchAndPopulateMatches() {
+                fetch('calendario/seriea.json')
+                    .then(response => response.json())
+                    .then(data => populateMatches(data))
+                    .catch(error => console.error('Error fetching the JSON data:', error));
+            }
+    
+            // Function to populate the HTML with JSON data
+            function populateMatches(data) {
+                const fixturesContainer = document.querySelector('.fixtures-content');
+    
+                // Clear existing content
+                fixturesContainer.innerHTML = '';
+    
+                // Assuming data has the correct structure
+                data['serie_a_2024_2025'].forEach(match => {
+                    // Create match container
+                    const matchContainer = document.createElement('div');
+                    matchContainer.classList.add('match-container');
+    
+                    // Create date container
+                    const dateContainer = document.createElement('div');
+                    dateContainer.classList.add('date-container');
+                    dateContainer.innerHTML = `
+                        <div class="match-number">Matchday ${match.matchday}</div>
+                        <div class="date">${match.date} - ${match.schedule}</div>
+                    `;
+    
+                    // Create game details
+                    const gameDetails = document.createElement('div');
+                    gameDetails.classList.add('game-details');
+                    gameDetails.innerHTML = `
+                        <div class="first-team">
+                            <div class="team-name">${match.home_team}</div>
+                            <div class="team-logo"><img src="${match.home_team_logo}" alt="${match.home_team} logo"></div>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div class="second-team">
+                            <div class="team-name">${match.away_team}</div>
+                            <div class="team-logo"><img src="${match.away_team_logo}" alt="${match.away_team} logo"></div>
+                        </div>
+                    `;
+    
+                    // Create home/away and stadium container
+                    const homeAwayContainer = document.createElement('div');
+                    homeAwayContainer.classList.add('home-away-container');
+                    homeAwayContainer.innerHTML = `
+                        <div class="home-away-content">${match.location === 'HOME' ? 'Home' : 'Away'}</div>
+                        <div class="stadium">${match.stadium}</div>
+                    `;
+    
+                    // Create score container
+                    const scoreContainer = document.createElement('div');
+                    scoreContainer.classList.add('score-container');
+                    scoreContainer.innerHTML = `
+                        <div class="score-content">
+                            <div class="home-team-score">${match.home_team_score !== undefined ? match.home_team_score : ''}</div>
+                            <div class="separator">-</div>
+                            <div class="away-team-score">${match.away_team_score !== undefined ? match.away_team_score : ''}</div>
+                        </div>
+                    `;
+    
+                    // Create CTAs container
+                    const ctasContainer = document.createElement('div');
+                    ctasContainer.classList.add('ctas-container');
+                    const matchIdentifier = `${match.home_team}-${match.away_team}`; // Unique identifier based on teams
+                    ctasContainer.innerHTML = `
+                        <a href="formazione-partita.html" data-match="${matchIdentifier}">Formazioni partita</a>
+                    `;
+    
+                    // Attach click event to the link
+                    ctasContainer.querySelector('a').addEventListener('click', function (event) {
+                        localStorage.setItem('selectedMatch', matchIdentifier);
+                    });
+    
+                    // Append all elements to the fixtures content
+                    matchContainer.appendChild(dateContainer);
+                    matchContainer.appendChild(gameDetails);
+                    matchContainer.appendChild(homeAwayContainer);
+                    fixturesContainer.appendChild(matchContainer);
+                    fixturesContainer.appendChild(scoreContainer);
+                    fixturesContainer.appendChild(ctasContainer);
+                });
+            }
+    
+            // Call the function to fetch data and populate matches
+            fetchAndPopulateMatches();
         });
-    }
-
-    // Call the function to fetch data and populate matches
-    fetchAndPopulateMatches();
-});
-</script>
+    </script>
+    
 </body>
 </html>

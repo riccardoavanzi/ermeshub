@@ -405,7 +405,6 @@ a{
     width: 100%;
     height: calc(100vh - 70px);
     overflow-y: scroll;
-    margin-top: 5rem;
     &::-webkit-scrollbar{
         display: none;
     }
@@ -417,9 +416,9 @@ a{
         margin-bottom: 5rem;
         .competition{
             img{
-                width: 50px;
-                margin-bottom: 1.5rem;
-                padding-bottom: 2rem;
+                width: 30px;
+                margin-bottom: .5rem;
+                padding-bottom: 1rem;
                 border-bottom: 1px dashed rgb(85, 76, 209);
             }
         }
@@ -435,7 +434,7 @@ a{
                 display: flex;
                 align-items: center;
                 img{
-                    width: 80px;
+                    width: 60px;
                     margin: 0rem 1rem;
                 }
                 .team-name{
@@ -461,6 +460,7 @@ a{
         width: fit-content;
         margin: auto;
         display: flex;
+        align-items: center;
         .formazione-list-container{
             margin: 1rem;
             .formazione-list-content{
@@ -482,15 +482,23 @@ a{
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
-                                padding: .5rem 1.5rem;
-                                border-radius: $bigradius;
+                                padding: .3rem .5rem;
+                                border-radius: $radius;
                                 background: $blue-gradient;
                                 width: 25rem;
+                                margin: .2rem auto;
+                                &.capitano{
+                                    background: rgba(2, 42, 221, 0.7);
+                                }
                                 .player-img-name{
                                     display: flex;
                                     align-items: center;
+                                    img{
+                                        width: 44px;
+                                    }
                                     .player-name{
                                         margin-left: .5rem;
+                                        font-size: 1rem;
                                     }
                                 }
                                 .player-details{
@@ -509,17 +517,49 @@ a{
             .formazione-display-content{
                 .canvas-wrapper{
                     padding: 1rem;
-                    background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+                    // background: $pitch-bg;
                     border-radius: $radius;
+                    backdrop-filter: blur(5px);
                     overflow: hidden;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 5rem;
-                    .canvas{
-                        background-color: #77b300;
-                        border: none;
-                        border-radius: 20px;
+                    position: relative;
+                    #lineup{
+                        background: none;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        #pitch {
+                            position: relative;
+                            width: 450px;
+                            height: 650px;
+                        }
+                        
+                        .player {
+                            position: absolute;
+                            width: 70px; /* Size of player images */
+                            height: 70px; /* Size of player images */
+                            cursor: grab;
+                        }
+                        
+                        .player.dragging {
+                            cursor: grabbing;
+                        }
+                        
+                        .player-name {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            color: white;
+                            font-size: 12px;
+                            background: rgba(0, 0, 0, 0.5);
+                            padding: 2px 5px;
+                            border-radius: 3px;
+                        }
+                        
                     }
                 }
             }

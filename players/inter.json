@@ -6,7 +6,7 @@
         "posizione": "Portiere",
         "eta": 35,
         "origine": "Svizzera",
-        "foto": "assets/giocatori/sommer.png"
+        "foto": "assets/players/inter/sommer.png"
       },
       {
         "nome": "Josep Martínez",
@@ -14,7 +14,7 @@
         "posizione": "Portiere",
         "eta": 25,
         "origine": "Spagna",
-        "foto": "assets/giocatori/martinez.png"
+        "foto": "assets/players/inter/martinez.png"
       },
       {
         "nome": "Matteo Darmian",
@@ -22,7 +22,7 @@
         "posizione": "Terzino destro",
         "eta": 34,
         "origine": "Italia",
-        "foto": "assets/giocatori/darmian.png"
+        "foto": "assets/players/inter/darmian.png"
       },
       {
         "nome": "Alessandro Bastoni",
@@ -30,7 +30,7 @@
         "posizione": "Difensore centrale",
         "eta": 25,
         "origine": "Italia",
-        "foto": "assets/giocatori/bastoni.png"
+        "foto": "assets/players/inter/bastoni.png"
       },
       {
         "nome": "Francesco Acerbi",
@@ -38,7 +38,7 @@
         "posizione": "Difensore centrale",
         "eta": 36,
         "origine": "Italia",
-        "foto": "assets/giocatori/acerbi.png"
+        "foto": "assets/players/inter/acerbi.png"
       },
       {
         "nome": "Federico Dimarco",
@@ -46,7 +46,7 @@
         "posizione": "Terzino sinistro",
         "eta": 26,
         "origine": "Italia",
-        "foto": "assets/giocatori/dimarco.png"
+        "foto": "assets/players/inter/dimarco.png"
       },
       {
         "nome": "Benjamin Pavard",
@@ -54,7 +54,7 @@
         "posizione": "Difensore centrale",
         "eta": 28,
         "origine": "Francia",
-        "foto": "assets/giocatori/pavard.png"
+        "foto": "assets/players/inter/pavard.png"
       },
       {
         "nome": "Carlos Augusto",
@@ -62,7 +62,7 @@
         "posizione": "Terzino sinistro",
         "eta": 24,
         "origine": "Brasile",
-        "foto": "assets/giocatori/augusto.png"
+        "foto": "assets/players/inter/augusto.png"
       },
       {
         "nome": "Denzel Dumfries",
@@ -70,7 +70,7 @@
         "posizione": "Terzino destro",
         "eta": 27,
         "origine": "Paesi Bassi",
-        "foto": "assets/giocatori/dumfries.png"
+        "foto": "assets/players/inter/dumfries.png"
       },
       {
         "nome": "Stefan de Vrij",
@@ -78,7 +78,7 @@
         "posizione": "Difensore centrale",
         "eta": 32,
         "origine": "Paesi Bassi",
-        "foto": "assets/giocatori/devrij.png"
+        "foto": "assets/players/inter/devrij.png"
       },
       {
         "nome": "Yann Bisseck",
@@ -86,7 +86,7 @@
         "posizione": "Difensore centrale",
         "eta": 23,
         "origine": "Germania",
-        "foto": "assets/giocatori/bisseck.png"
+        "foto": "assets/players/inter/bisseck.png"
       },
       {
         "nome": "Hakan Çalhanoğlu",
@@ -94,7 +94,7 @@
         "posizione": "Centrocampista",
         "eta": 30,
         "origine": "Turchia",
-        "foto": "assets/giocatori/calhanoglu.png"
+        "foto": "assets/players/inter/calhanoglu.png"
       },
       {
         "nome": "Henrikh Mkhitaryan",
@@ -102,7 +102,7 @@
         "posizione": "Centrocampista",
         "eta": 35,
         "origine": "Armenia",
-        "foto": "assets/giocatori/mkhitaryan.png"
+        "foto": "assets/players/inter/mkhitaryan.png"
       },
       {
         "nome": "Davide Frattesi",
@@ -110,7 +110,7 @@
         "posizione": "Centrocampista",
         "eta": 24,
         "origine": "Italia",
-        "foto": "assets/giocatori/frattesi.png"
+        "foto": "assets/players/inter/frattesi.png"
       },
       {
         "nome": "Kristjan Asllani",
@@ -118,7 +118,7 @@
         "posizione": "Centrocampista",
         "eta": 21,
         "origine": "Albania",
-        "foto": "assets/giocatori/asllani.png"
+        "foto": "assets/players/inter/asllani.png"
       },
       {
         "nome": "Nicolò Barella",
@@ -126,7 +126,7 @@
         "posizione": "Centrocampista",
         "eta": 27,
         "origine": "Italia",
-        "foto": "assets/giocatori/barella.png"
+        "foto": "assets/players/inter/barella.png"
       },
       {
         "nome": "Tajon Buchanan",
@@ -134,7 +134,7 @@
         "posizione": "Centrocampista",
         "eta": 25,
         "origine": "Canada",
-        "foto": "assets/giocatori/buchanan.png"
+        "foto": "assets/players/inter/buchanan.png"
       },
       {
         "nome": "Piotr Zieliński",
@@ -142,7 +142,7 @@
         "posizione": "Centrocampista",
         "eta": 29,
         "origine": "Polonia",
-        "foto": "assets/giocatori/zielinski.png"
+        "foto": "assets/players/inter/zielinski.png"
       },
       {
         "nome": "Lautaro Martínez",
@@ -150,7 +150,7 @@
         "posizione": "Attaccante",
         "eta": 26,
         "origine": "Argentina",
-        "foto": "assets/giocatori/martinez.png"
+        "foto": "assets/players/inter/martinez.png"
       },
       {
         "nome": "Marcus Thuram",
@@ -158,7 +158,7 @@
         "posizione": "Attaccante",
         "eta": 26,
         "origine": "Francia",
-        "foto": "assets/giocatori/thuram.png"
+        "foto": "assets/players/inter/thuram.png"
       },
       {
         "nome": "Marko Arnautović",
@@ -166,7 +166,7 @@
         "posizione": "Attaccante",
         "eta": 35,
         "origine": "Austria",
-        "foto": "assets/giocatori/arnautovic.png"
+        "foto": "assets/players/inter/arnautovic.png"
       },
       {
         "nome": "Mehdi Taremi",
@@ -174,7 +174,7 @@
         "posizione": "Attaccante",
         "eta": 31,
         "origine": "Iran",
-        "foto": "assets/giocatori/taremi.png"
+        "foto": "assets/players/inter/taremi.png"
       }
     ]
   }
