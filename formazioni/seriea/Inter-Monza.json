@@ -1,0 +1,71 @@
+{
+    "starting_eleven": [
+      {
+        "nome": "Yann Sommer",
+        "numero_maglia": 1,
+        "foto": "assets/players/inter/sommer.png",
+        "posizione": "Portiere"
+      },
+      {
+        "nome": "Yann Bisseck",
+        "numero_maglia": 31,
+        "foto": "assets/players/inter/bisseck.png",
+        "posizione": "Difensore"
+      },
+      {
+        "nome": "Alessandro Bastoni",
+        "numero_maglia": 95,
+        "foto": "assets/players/inter/bastoni.png",
+        "posizione": "Difensore"
+      },
+      {
+        "nome": "Benjamin Pavard",
+        "numero_maglia": 28,
+        "foto": "assets/players/inter/pavard.png",
+        "posizione": "Difensore"
+      },
+      {
+        "nome": "Federico Dimarco",
+        "numero_maglia": 32,
+        "foto": "assets/players/inter/dimarco.png",
+        "posizione": "Esterno"
+      },
+      {
+        "nome": "Denzel Dumfries",
+        "numero_maglia": 2,
+        "foto": "assets/players/inter/dumfries.png",
+        "posizione": "Esterno"
+      },
+      {
+        "nome": "Hakan Çalhanoğlu",
+        "numero_maglia": 20,
+        "foto": "assets/players/inter/calhanoglu.png",
+        "posizione": "Centrocampista"
+      },
+      {
+        "nome": "Henrikh Mkhitaryan",
+        "numero_maglia": 22,
+        "foto": "assets/players/inter/mkhitaryan.png",
+        "posizione": "Centrocampista"
+      },
+      {
+        "nome": "Nicolò Barella",
+        "numero_maglia": 23,
+        "foto": "assets/players/inter/barella.png",
+        "posizione": "Centrocampista"
+      },
+      {
+        "nome": "Lautaro Martínez",
+        "numero_maglia": 10,
+        "foto": "assets/players/inter/lautaro.png",
+        "posizione": "Attaccante"
+      },
+      {
+        "nome": "Marcus Thuram",
+        "numero_maglia": 9,
+        "foto": "assets/players/inter/thuram.png",
+        "posizione": "Attaccante"
+      }
+    ]
+  }
+  
