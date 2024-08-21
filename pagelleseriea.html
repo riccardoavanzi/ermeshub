@@ -118,6 +118,22 @@
                 link.addEventListener('click', function (event) {
                     const matchIdentifier = this.getAttribute('data-match'); // e.g., "Genoa-Inter"
                     const jsonFilePath = `/pagelle/pagelle-seriea/Pagella-${matchIdentifier}.json`; // Generates "Pagella-Genoa-Inter.json"
+
+                    // Store match details in localStorage
+                    const matchDetails = {
+                        homeTeam: {
+                            name: match.home_team,
+                            logo: match.home_team_logo
+                        },
+                        awayTeam: {
+                            name: match.away_team,
+                            logo: match.away_team_logo
+                        },
+                        stadium: match.stadium,
+                        schedule: `${match.date} - ${match.schedule}`
+                    };
+
+                    localStorage.setItem('matchDetails', JSON.stringify(matchDetails));
                     localStorage.setItem('matchJsonFilePath', jsonFilePath); // Store the path to the JSON file
                 });
             });
@@ -128,8 +144,6 @@
         fetchAndPopulatePagelle();
     });
 </script>
-
-
 
 </body>
 </html>

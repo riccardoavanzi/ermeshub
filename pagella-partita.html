@@ -113,6 +113,31 @@
             .catch(error => console.error('Error fetching the JSON data:', error));
     }
 
+    // Function to populate the match header
+    function populateMatchHeader() {
+        const matchDetails = JSON.parse(localStorage.getItem('matchDetails'));
+
+        if (!matchDetails) {
+            console.error('No match details found.');
+            return;
+        }
+
+        // Populate home team details
+        document.querySelector('.home-team-container .team-name').textContent = matchDetails.homeTeam.name;
+        document.querySelector('.home-team-container .logo img').src = matchDetails.homeTeam.logo;
+
+        // Populate away team details
+        document.querySelector('.away-team-container .team-name').textContent = matchDetails.awayTeam.name;
+        document.querySelector('.away-team-container .logo img').src = matchDetails.awayTeam.logo;
+
+        // Populate stadium and schedule
+        document.querySelector('.details .stadium').textContent = matchDetails.stadium;
+        document.querySelector('.details .schedule').textContent = matchDetails.schedule;
+    }
+
+    // Call the function to populate the match header
+    populateMatchHeader();
+
     // Function to populate the HTML with JSON data
     function populatePagella(data) {
         const pagellaList = document.querySelector('.pagella-list');
