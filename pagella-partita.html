@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Ermes Hub - Pagella partita</title>
+</head>
+<body>
+    <div class="page-container abstract">
+        <div class="page-content blurred centered">
+            <!-- HEADER -->
+            <div class="header-container">
+                <div class="header-content">
+                    <div class="logo">
+                        ErmesHub
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="hub.html">Hub</a></li>
+                            <li><a href="competizioni.html">Competizioni</a></li>
+                            <li><a href="pagelle.html">Pagelle</a></li>
+                            <li><a href="scouting.html">Scouting</a></li>
+                            <li><button class="baselinebtn">logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- PAGELLA-CONTAINER -->
+            <div class="pagella-container">
+                 <!-- MATCH-HEADER -->
+                <div class="match-header-container">
+                    <div class="competition">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNbnCGdtHO203OHmuKsyCZlYP1d2FXNi_19Q&s" alt="">
+                    </div>
+                    <div class="match-header-content">
+                        <div class="home-team-container">
+                            <div class="team-name"></div>
+                            <div class="logo">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="vs"> VS </div>
+                        <div class="away-team-container">
+                            <div class="logo">
+                                <img src="" alt="">
+                            </div>
+                            <div class="team-name"></div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="stadium"></div>
+                        <div>-</div>
+                        <div class="schedule"></div>
+                    </div>
+                </div>
+                <!-- PAGELLA CONTENT -->
+                <div class="pagella-content">
+                    <div class="pagella-list">
+                        <div class="pagella-giocatore">
+                            <img src="" alt="">
+                            <div class="player">
+                                <div class="player-name"></div>
+                                <div class="player-comment"></div>
+                            </div>
+                            <div class="voto"></div>
+                        </div>
+                    </div>
+                    <div class="highlights">
+                        <div id="top-performer">
+                            <div>TOP PERFORMER</div>
+                            <div class="top-performer-details">
+                                <img src="" alt="">
+                                <div class="top-performer-comment"></div>
+                            </div>
+                        </div>
+                        <div id="low-performer">
+                            <div>LOWER PERFORMER</div>
+                            <div class="low-performer-details">
+                                <img src="" alt="">
+                                <div class="low-performer-comment"></div>
+                            </div>
+                        </div>
+                        <div id="trainer">
+                            <div>Allenatore</div>
+                            <div class="trainer-performer-details">
+                                <img src="" alt="">
+                                <div class="trainer-notes">
+                                    <div class="voto"></div>
+                                    <div class="trainer-comment"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Function to fetch JSON data and populate the HTML
+    function fetchAndPopulatePagella() {
+        const jsonFilePath = localStorage.getItem('matchJsonFilePath'); // Retrieves the stored JSON file path
+
+        if (!jsonFilePath) {
+            console.error('No JSON file path found for the selected match.');
+            return;
+        }
+
+        fetch(jsonFilePath)
+            .then(response => response.json())
+            .then(data => populatePagella(data))
+            .catch(error => console.error('Error fetching the JSON data:', error));
+    }
+
+    // Function to populate the HTML with JSON data
+    function populatePagella(data) {
+        const pagellaList = document.querySelector('.pagella-list');
+        const topPerformerElement = document.querySelector('#top-performer .top-performer-details');
+        const lowPerformerElement = document.querySelector('#low-performer .low-performer-details');
+        const trainerElement = document.querySelector('#trainer .trainer-performer-details');
+
+        // Clear existing content
+        pagellaList.innerHTML = '';
+
+        // Populate players
+        data.giocatori.forEach(giocatore => {
+            // Create player element
+            const giocatoreElement = document.createElement('div');
+            giocatoreElement.classList.add('pagella-giocatore');
+
+            giocatoreElement.innerHTML = `
+                <div class="player">
+                    <img src="${giocatore.foto}" alt="${giocatore.nome}">
+                    <div class="player-text">
+                        <div class="player-name">${giocatore.nome}</div>
+                        <div class="player-comment">${giocatore.descrizione}</div>
+                    </div>
+                </div>
+                <div class="voto">${giocatore.valutazione}</div>
+            `;
+
+            // Append player element to the pagella list
+            pagellaList.appendChild(giocatoreElement);
+        });
+
+        // Populate top performer
+        if (data['top-performer']) {
+            topPerformerElement.querySelector('img').src = data['top-performer'].foto;
+            topPerformerElement.querySelector('.top-performer-comment').textContent = `${data['top-performer'].nome}: ${data['top-performer'].descrizione}`;
+        }
+
+        // Populate low performer
+        if (data['low-performer']) {
+            lowPerformerElement.querySelector('img').src = data['low-performer'].foto;
+            lowPerformerElement.querySelector('.low-performer-comment').textContent = `${data['low-performer'].nome}: ${data['low-performer'].descrizione}`;
+        }
+
+        // Populate trainer (Simone Inzaghi)
+        const trainerData = data.trainer; // No longer an array
+        if (trainerData) {
+            trainerElement.querySelector('img').src = trainerData.foto;
+            trainerElement.querySelector('.trainer-comment').textContent = trainerData.descrizione;
+            trainerElement.querySelector('.voto').textContent = trainerData.valutazione;
+        }
+    }
+
+    // Call the function to fetch data and populate the page
+    fetchAndPopulatePagella();
+});
+
+</script>
+
+</body>
+</html>

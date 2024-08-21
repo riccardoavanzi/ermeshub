@@ -1,0 +1,116 @@
+{
+    "giocatori": [
+        {
+            "nome": "Yann Sommer",
+            "foto": "assets/players/inter/sommer.png",
+            "descrizione": "Excellent saves and command of the box.",
+            "valutazione": "8"
+        },
+        {
+            "nome": "Alessandro Bastoni",
+            "foto": "assets/players/inter/bastoni.png",
+            "descrizione": "Calm and composed in defense, excellent passing.",
+            "valutazione": "8"
+        },
+        {
+            "nome": "Francesco Acerbi",
+            "foto": "assets/players/inter/acerbi.png",
+            "descrizione": "Leadership and experience showed throughout the match.",
+            "valutazione": "7"
+        },
+        {
+            "nome": "Federico Dimarco",
+            "foto": "assets/players/inter/dimarco.png",
+            "descrizione": "Great offensive support and accurate crosses.",
+            "valutazione": "7"
+        },
+        {
+            "nome": "Benjamin Pavard",
+            "foto": "assets/players/inter/pavard.png",
+            "descrizione": "Solid performance in central defense, few errors.",
+            "valutazione": "7"
+        },
+        {
+            "nome": "Carlos Augusto",
+            "foto": "assets/players/inter/augusto.png",
+            "descrizione": "Strong showing on the left, but lacked final delivery.",
+            "valutazione": "6"
+        },
+        {
+            "nome": "Denzel Dumfries",
+            "foto": "assets/players/inter/dumfries.png",
+            "descrizione": "Energetic display, constantly involved in attacks.",
+            "valutazione": "7"
+        },
+        {
+            "nome": "Yann Bisseck",
+            "foto": "assets/players/inter/bisseck.png",
+            "descrizione": "Good potential, but made some mistakes under pressure.",
+            "valutazione": "6"
+        },
+        {
+            "nome": "Hakan Çalhanoğlu",
+            "foto": "assets/players/inter/calhanoglu.png",
+            "descrizione": "Creative force in midfield, good set pieces.",
+            "valutazione": "8"
+        },
+        {
+            "nome": "Henrikh Mkhitaryan",
+            "foto": "assets/players/inter/mkhitaryan.png",
+            "descrizione": "Veteran presence in midfield, solid performance.",
+            "valutazione": "7"
+        },
+        {
+            "nome": "Davide Frattesi",
+            "foto": "assets/players/inter/frattesi.png",
+            "descrizione": "Energetic and full of running, added dynamism.",
+            "valutazione": "7"
+        },
+        {
+            "nome": "Nicolò Barella",
+            "foto": "assets/players/inter/barella.png",
+            "descrizione": "Controlled the midfield with his usual intensity.",
+            "valutazione": "8"
+        },
+        {
+            "nome": "Piotr Zieliński",
+            "foto": "assets/players/inter/zielinski.png",
+            "descrizione": "Played key passes and controlled the tempo.",
+            "valutazione": "8"
+        },
+        {
+            "nome": "Lautaro Martínez",
+            "foto": "assets/players/inter/lautaro.png",
+            "descrizione": "Constant threat to the opposition, scored crucial goals.",
+            "valutazione": "9"
+        },
+        {
+            "nome": "Marcus Thuram",
+            "foto": "assets/players/inter/thuram.png",
+            "descrizione": "Used his strength and speed well, good link-up play.",
+            "valutazione": "8"
+        },
+        {
+            "nome": "Mehdi Taremi",
+            "foto": "assets/players/inter/taremi.png",
+            "descrizione": "Showed glimpses of quality, but needs more time to adapt.",
+            "valutazione": "6"
+        }
+    ],
+    "trainer": {
+            "nome": "Simone Inzaghi",
+            "foto": "assets/players/inter/inzaghi.png",
+            "descrizione": "Always in control.",
+            "valutazione": "8"
+    },
+    "top-performer": {
+        "nome": "Lautaro Martínez",
+        "foto": "assets/players/inter/lautaro.png",
+        "descrizione": "Constant threat to the opposition, scored crucial goals."
+    },
+    "low-performer": {
+        "nome": "Mehdi Taremi",
+        "foto": "assets/players/inter/taremi.png",
+        "descrizione": "Showed glimpses of quality, but needs more time to adapt."
+    }
+}

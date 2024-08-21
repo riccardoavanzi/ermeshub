@@ -121,6 +121,12 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
 }
+.page-container.orange {
+  background: url("/assets/team-orange.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .page-container .page-content {
   width: 100vw;
   height: 100vh;
@@ -538,6 +544,222 @@ a:hover {
   background: rgba(0, 0, 0, 0.5);
   padding: 2px 5px;
   border-radius: 3px;
+}
+
+.pagelle-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+.pagelle-container::-webkit-scrollbar {
+  display: none;
+}
+.pagelle-container .pagelle-content {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-content: center;
+}
+.pagelle-container .pagelle-content .partita-container {
+  background: linear-gradient(268.33deg, #223AA5 1.36%, #12226D 70.42%);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem;
+  width: 20rem;
+}
+.pagelle-container .pagelle-content .partita-container .partita-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pagelle-container .pagelle-content .partita-container .partita-content .top {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.pagelle-container .pagelle-content .partita-container .partita-content .middle {
+  display: flex;
+  align-items: center;
+}
+.pagelle-container .pagelle-content .partita-container .partita-content .middle img {
+  width: 64px;
+  margin: 1rem;
+}
+.pagelle-container .pagelle-content .partita-container .partita-content .bottom {
+  margin-bottom: 1rem;
+}
+.pagelle-container .pagelle-content .partita-container .partita-content .bottom a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  background: white;
+  border-radius: 8px;
+  padding: 0.3rem;
+}
+
+.pagella-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+.pagella-container::-webkit-scrollbar {
+  display: none;
+}
+.pagella-container .match-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.pagella-container .match-header-container .competition img {
+  width: 30px;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgb(85, 76, 209);
+}
+.pagella-container .match-header-container .match-header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagella-container .match-header-container .match-header-content .vs {
+  font-size: 1.3rem;
+}
+.pagella-container .match-header-container .match-header-content .home-team-container, .pagella-container .match-header-container .match-header-content .away-team-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.pagella-container .match-header-container .match-header-content .home-team-container img, .pagella-container .match-header-container .match-header-content .away-team-container img {
+  width: 60px;
+  margin: 0rem 1rem;
+}
+.pagella-container .match-header-container .match-header-content .home-team-container .team-name, .pagella-container .match-header-container .match-header-content .away-team-container .team-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.pagella-container .match-header-container .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background: rgba(2, 42, 221, 0.7);
+  border-radius: 8px;
+}
+.pagella-container .match-header-container .details .stadium, .pagella-container .match-header-container .details .schedule {
+  margin: 1rem;
+  font-size: 1rem;
+}
+.pagella-container .pagella-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: fit-content;
+  margin: auto;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+.pagella-container .pagella-content .pagella-list {
+  display: flex;
+  flex-direction: column;
+}
+.pagella-container .pagella-content .pagella-list .pagella-giocatore {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(268.33deg, rgba(63, 78, 148, 0.5) 1.36%, rgba(0, 0, 0, 0.5) 70.42%);
+  margin: 0.2rem auto;
+  border-radius: 24px;
+}
+.pagella-container .pagella-content .pagella-list .pagella-giocatore .player {
+  display: flex;
+  align-items: center;
+}
+.pagella-container .pagella-content .pagella-list .pagella-giocatore .player img {
+  width: 50px;
+  border-radius: 100px;
+  margin-right: 1rem;
+}
+.pagella-container .pagella-content .pagella-list .pagella-giocatore .player .player-text .player-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.pagella-container .pagella-content .pagella-list .pagella-giocatore .player .player-text .player-comment {
+  display: none;
+  font-size: 1rem;
+}
+.pagella-container .pagella-content .pagella-list .pagella-giocatore .voto {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-right: 1rem;
+}
+.pagella-container .pagella-content .highlights {
+  display: flex;
+  flex-direction: column;
+}
+.pagella-container .pagella-content .highlights #top-performer {
+  background: linear-gradient(272.82deg, rgba(34, 165, 134, 0.8) 5.45%, rgba(20, 58, 231, 0.8) 104.4%);
+  padding: 1rem 2rem;
+  border-radius: 24px;
+}
+.pagella-container .pagella-content .highlights #top-performer .top-performer-details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pagella-container .pagella-content .highlights #top-performer .top-performer-details img {
+  width: 80px;
+  margin-right: 2rem;
+}
+.pagella-container .pagella-content .highlights #low-performer {
+  background: linear-gradient(272.82deg, rgba(68, 22, 22, 0.8) 5.45%, rgba(20, 58, 231, 0.8) 104.4%);
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  margin-top: 1rem;
+}
+.pagella-container .pagella-content .highlights #low-performer .low-performer-details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pagella-container .pagella-content .highlights #low-performer .low-performer-details img {
+  width: 80px;
+  margin-right: 2rem;
+}
+.pagella-container .pagella-content .highlights #trainer {
+  background: linear-gradient(272.82deg, rgb(34, 58, 165) 0%, rgba(20, 59, 231, 0.328) 100%);
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  margin-top: 1rem;
+}
+.pagella-container .pagella-content .highlights #trainer .trainer-performer-details {
+  display: flex;
+  align-items: center;
+}
+.pagella-container .pagella-content .highlights #trainer .trainer-performer-details img {
+  width: 80px;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+.pagella-container .pagella-content .highlights #trainer .trainer-performer-details .trainer-notes {
+  display: flex;
+  align-items: center;
+}
+.pagella-container .pagella-content .highlights #trainer .trainer-performer-details .trainer-notes .voto {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-right: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
